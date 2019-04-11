@@ -23,6 +23,8 @@
     "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^3.0.2",
+    "grunt-svg-sprite": "^1.5.0",
+    "grunt-svg-sprites": "^1.0.0",
     "node-sass": "^4.11.0"
   },
   "dependencies": {

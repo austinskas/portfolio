@@ -29,18 +29,17 @@ module.exports = function(grunt) {
       },
       assemble: {
         options: {
-            layoutdir: 'template/layouts',
+            layoutdir: 'src/template/layouts',
             layout: ['default.hbs'],
-            partials: ['template/partials/{,*/}*.*'],
+            partials: ['src/template/partials/{,*/}*.*','src/sprites/svg/*'],
             helpers: ['partial'],
             flatten: true
         },
         en: {
             options: {
-                data: ['template/data/en/*.yml']
-
+                data: ['src/template/data/en/*.yml']
             },
-            src: ['template/pages/en/*.hbs'],
+            src: ['src/template/pages/en/*.hbs'],
             dest: './web'
         },
 
@@ -49,26 +48,68 @@ module.exports = function(grunt) {
         options: {
         },
         dev: {
-            files: ['src/sass/**/*.scss', 'src/templates/**/*.hbs'],
-            tasks: ['compass:dev', 'assemble:en']
+            files: ['src/assets/sass/**/*.scss', 'src/template/**/*.hbs'],
+            tasks: ['compass:dev', 'assemble:site']
         },
         handlebars: {
-            files: ['src/templates/*/*.hbs', 'src/templates/layouts/*.hbs' ],
-            tasks: ['assemble:en']
+            files: ['src/template/*/*.hbs', 'src/template/layouts/*.hbs' ],
+            tasks: ['assemble:site']
         }
     },
+    svg_sprite: {
+      generate: {
+          cwd: 'web/assets/vendor/material-design-icons',
+          src: [
+              '../../../../web/assets/image/ic_facebook_24px.svg',
+              '../../../../web/assets/image/ic_twitter_24px.svg',
+              '../../../../web/assets/image/ic_dribbble_24px.svg',
+                '../../../../web/assets/image/ic_phone_24px.svg',
+                  '../../../../web/assets/image/ic_monitor_24px.svg',
+                    '../../../../web/assets/image/ic_editing_24px.svg',
+                      '../../../../web/assets/image/ic_strategy_24px.svg',
+
+
+
+          ],
+          dest: 'src/sprites',
+          options: {
+              shape: {
+                  id: {
+                      generator: function(filename) {
+                          var id = filename.match(/ic_(\w+)_\d+/);
+                          return id[1];
+                      }
+                  },
+              },
+              mode: {
+                  symbol: {
+                      dest: ''
+                  }
+              }
+          }
+      }
+  },
+
   });
 
   [
     'grunt-contrib-compass',
     'grunt-contrib-watch',
     'grunt-assemble',
+    'grunt-svg-sprite'
+
+
 ].forEach(grunt.loadNpmTasks);
 
   // Default task(s).
+  grunt.registerTask('assemble:site', [
+          'assemble:en',
+
+  ]);
   grunt.registerTask('default', [
       'compass:dist',
-      'assemble:en'
+      'assemble:en',
+
   ]);
 
 };

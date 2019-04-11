@@ -1,0 +1,181 @@
+
+
+.image-text {
+max-width: 800px;
+font-size: 7rem;
+font-weight: bold;
+word-spacing: -10px;
+line-height: 110px;
+text-align: center;
+padding-bottom: 150px;
+position: absolute;
+margin-top:60px;
+}
+
+.underline {
+    margin-bottom: 50px;
+}
+
+.bg-white {
+    background: #fff;
+    height: 600px;
+}
+
+.bg-blue {
+    background: #006cff;
+    margin-top: -40px;
+    height: 500px;
+-webkit-box-shadow: -4px 49px 57px -44px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 49px 57px -44px rgba(0,0,0,0.75);
+box-shadow: -4px 49px 57px -44px rgba(0,0,0,0.75);
+   color:#fff;
+   margin:15px;
+   border-radius: 20px;
+    border: 2px solid #006cff;
+}
+
+.container-fluid{
+    color: #fff;
+}
+
+.background{
+background-image: url("https://d3f86pfw66amx.cloudfront.net/uncode/wp-content/uploads/2017/05/zero-gravity-devices-comp-min.jpg");
+max-width: 100%;
+background-repeat: no-repeat;
+background-position: center;
+background-position-x:center;
+background-position-y:center;
+background-size:cover;
+height: 600px;
+}
+
+
+
+.about {
+    margin-top:40px;
+    color: #fff;
+    text-align: center;
+
+
+}
+
+.about-left {
+    height: 250px;
+    font-size: 3rem;
+    font-weight: 740;
+    word-spacing: -5px;
+    line-height: 50px;
+    margin-top:30px;
+    text-align: right;
+
+}
+
+.about-right {
+    font-size: 30px;;
+ word-spacing: -2px;
+ line-height: 35px;
+ margin-top:30px;
+ text-align: justify;
+ font-weight: 440;
+}
+
+.bg-grey{
+    background: #1b1d1f;
+    height: 800px;
+    color:#fff;
+
+}
+
+.svg-icon2 {
+    fill:blue;
+
+}
+
+.services {
+
+}
+.flex{
+display:flex;
+}
+
+
+.bg-blue2{
+display: table;
+table-layout: fixed;
+position: relative;
+width: 50%;
+height: 800px;
+    background:#006cff;
+    -webkit-box-shadow: -4px 49px 57px -44px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 49px 57px -44px rgba(0,0,0,0.75);
+    box-shadow: -4px 49px 57px -44px rgba(0,0,0,0.75);
+
+       border-radius: 20px;
+        border: 2px solid #006cff;
+        }
+
+.text{
+    margin: 50px;
+
+
+
+}
+
+
+.text-col{
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    color: grey;
+    text-align: justify;
+    margin: 20px;
+
+}
+
+.text-a {
+    color:black;
+    font-family: fantasy;
+    text-align: center;
+
+}
+
+.t-entry-date{
+color: black;
+text-align: center;
+
+}
+
+.journal{
+    color: black;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.text-logo {
+    width: 2rem;
+}
+
+.logo-img {
+    margin:15px;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .topbar {
+        display: none;
+            }
+
+
+            .about-left {
+                font-size: 1.5rem;
+            }
+
+            .text-center {
+                font-size:24px;
+            }
+            .image-text {
+                font-size: 3rem;
+                line-height: 50px;
+            }
+}
